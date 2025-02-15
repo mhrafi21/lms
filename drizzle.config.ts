@@ -6,11 +6,12 @@ export default defineConfig({
     schema: "./src/dizzle/schema.ts",
     verbose: true,
     strict: true,
+    dialect: "postgresql",
     dbCredentials: {
-        password:  env DB_PASSWORD,
-        user: process.env.DB_USER,
-        database: process.env.DB_NAME,
-        host: process.env.DB_HOST,
+        password:  env.DB_PASSWORD,
+        user: env.DB_USER,
+        database: env.DB_NAME,
+        host: env.DB_HOST,
         ssl: false
     }
 
